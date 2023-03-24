@@ -33,3 +33,11 @@ Create a port-forward like so:
 ```bash
 kubectl port-forward -n argocd service/argocd-server 8080:443
 ```
+
+Open <https://localhost:8080/> in your browser.
+
+Get the secret that stores the password and decode it with the bellow command.
+
+```bash
+kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 --decode
+```
