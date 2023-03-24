@@ -12,7 +12,13 @@ Remember to look around all the folders, files and change things to your own lik
 
 ## Install ArgoCD
 
-Install ArgoCD with bellow commands.
+Install ArgoCD with bellow command.
+
+```bash
+kubectl apply -k ./argocd/base
+```
+
+or
 
 ```bash
 kubectl create namespace argocd

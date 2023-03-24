@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: production
+  name: staging
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: production
+  project: staging
   source:
     repoURL: https://github.com/RustyTake-Off/gitops-argocd.git
     targetRevision: HEAD
-    path: deployment/production
+    path: deployments/staging/patches
   destination:
     server: https://kubernetes.default.svc
-    namespace: production
+    namespace: staging
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
@@ -24,19 +24,19 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: gitops-argocd
+  name: production
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: staging
+  project: production
   source:
     repoURL: https://github.com/RustyTake-Off/gitops-argocd.git
     targetRevision: HEAD
-    path: deployment/staging
+    path: deployments/production/patches
   destination:
     server: https://kubernetes.default.svc
-    namespace: staging
+    namespace: production
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
