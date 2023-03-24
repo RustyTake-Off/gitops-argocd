@@ -10,10 +10,6 @@ Remember to look around all the folders, files and change things to your own lik
 
 * Kubernetes Cluster ([Kind](https://kind.sigs.k8s.io/), [Minikube](https://minikube.sigs.k8s.io/), AKS or other)
 
-```bash
-kind create cluster --name=prod
-```
-
 ## Install ArgoCD
 
 Install ArgoCD with bellow commands.
