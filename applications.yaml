@@ -21,25 +21,25 @@ spec:
       selfHeal: true
       prune: true
 ---
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: production
-  namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  project: production
-  source:
-    repoURL: https://github.com/RustyTake-Off/gitops-argocd.git
-    targetRevision: HEAD
-    path: deployments/production/patches
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: production
-  syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
-    automated:
-      selfHeal: true
-      prune: true
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: production
+#   namespace: argocd
+#   finalizers:
+#     - resources-finalizer.argocd.argoproj.io
+# spec:
+#   project: production
+#   source:
+#     repoURL: https://github.com/RustyTake-Off/gitops-argocd.git
+#     targetRevision: HEAD
+#     path: deployments/production/patches
+#   destination:
+#     server: https://kubernetes.default.svc
+#     namespace: production
+#   syncPolicy:
+#     syncOptions:
+#       - CreateNamespace=true
+#     automated:
+#       selfHeal: true
+#       prune: true
