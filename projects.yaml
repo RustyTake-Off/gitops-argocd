@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: staging
+  name: production
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  description: Staging project for gitops-argocd.
+  description: Production project for gitops-argocd.
   sourceRepos:
     - "*"
   destinations:
@@ -18,24 +18,3 @@ spec:
   namespaceResourceWhitelist:
     - group: "*"
       kind: "*"
----
-# apiVersion: argoproj.io/v1alpha1
-# kind: AppProject
-# metadata:
-#   name: production
-#   namespace: argocd
-#   finalizers:
-#     - resources-finalizer.argocd.argoproj.io
-# spec:
-#   description: Production project for gitops-argocd.
-#   sourceRepos:
-#     - "*"
-#   destinations:
-#     - namespace: "*"
-#       server: https://kubernetes.default.svc
-#   clusterResourceWhitelist:
-#     - group: "*"
-#       kind: "*"
-#   namespaceResourceWhitelist:
-#     - group: "*"
-#       kind: "*"
