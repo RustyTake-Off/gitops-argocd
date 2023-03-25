@@ -3,6 +3,7 @@ kind: Kustomization
 
 commonLabels:
   project: gitops-argocd
+  happy: feet
 
 resources:
   - ../base
