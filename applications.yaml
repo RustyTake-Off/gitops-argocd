@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/RustyTake-Off/gitops-argocd.git
     targetRevision: HEAD
-    path: deployments/production/patches
+    path: deployments/production/base
   destination:
     server: https://kubernetes.default.svc
     namespace: production

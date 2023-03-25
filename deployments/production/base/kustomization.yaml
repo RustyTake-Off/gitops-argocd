@@ -6,9 +6,6 @@ namespace: production
 namePrefix: prod-
 nameSuffix: -v1
 
-commonLabels:
-  gitops: argocd
-
 resources:
   - configmap.yaml
   - deployment.yaml
