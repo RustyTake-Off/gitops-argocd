@@ -28,6 +28,12 @@ kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
+## Create projects and applications
+
+You can create projects and applications by logging in to ArgoCD and doing it manually, you can also do declaratively.
+
+Files under **argocd directory** create projects and applications.
+
 ## Log into the ArgoCD server
 
 Create a port-forward like so:
@@ -43,10 +49,3 @@ Get the secret that stores the password and decode it with the bellow command.
 ```bash
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 --decode
 ```
-
-  selector:
-    matchLabels:
-      app: webapp-1
-    metadata:
-      labels:
-        app: webapp-1
