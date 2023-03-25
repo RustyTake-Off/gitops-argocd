@@ -3,8 +3,6 @@ kind: Service
 metadata:
   name: webapp-1-srv
 spec:
-  selector:
-    app: webapp-1
   type: ClusterIP
   ports:
     - port: 80
