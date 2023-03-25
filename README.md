@@ -37,7 +37,7 @@ Files under **argocd directory** create projects and applications.
 Run bellow command to apply them.
 
 ```bash
-kubectl apply -f ./argocd/project.yaml, ./argocd/applications.yaml
+kubectl apply -f ./argocd
 ```
 
 ## Log into the ArgoCD server
