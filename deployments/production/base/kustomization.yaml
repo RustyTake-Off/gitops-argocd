@@ -7,7 +7,7 @@ namePrefix: prod-
 nameSuffix: -v1
 
 commonLabels:
-  app: webapp-1
+  gitops: argocd
 
 resources:
   - configmap.yaml
