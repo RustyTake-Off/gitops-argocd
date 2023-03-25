@@ -34,6 +34,12 @@ You can create projects and applications by logging in to ArgoCD and doing it ma
 
 Files under **argocd directory** create projects and applications.
 
+Run bellow command to apply them.
+
+```bash
+kubectl apply -f ./argocd/project.yaml, ./argocd/applications.yaml
+```
+
 ## Log into the ArgoCD server
 
 Create a port-forward like so:
