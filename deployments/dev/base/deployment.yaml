@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp-1
+  name: webapp-2
 spec:
   replicas: 1
   template:
     spec:
       containers:
-        - name: webapp-1
+        - name: webapp-2
           image: mcr.microsoft.com/azuredocs/aks-helloworld:v1
           ports:
             - containerPort: 80
@@ -22,5 +22,5 @@ spec:
             - name: TITLE
               valueFrom:
                 configMapKeyRef:
-                  name: webapp-1-cm
-                  key: TITLE_webapp_1
+                  name: webapp-2-cm
+                  key: TITLE_webapp_2
