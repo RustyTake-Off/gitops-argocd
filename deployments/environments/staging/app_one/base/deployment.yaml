@@ -36,7 +36,7 @@ spec:
             - name: MESSAGE
               valueFrom:
                 fieldRef:
-                  fieldPath: metadata.labels.app
+                  fieldPath: metadata.labels.name
             - name: KUBERNETES_NAMESPACE
               valueFrom:
                 fieldRef:
