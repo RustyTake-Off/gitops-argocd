@@ -39,7 +39,7 @@ Files under **argocd directory** create projects and applications.
 Run bellow command to apply them.
 
 ```bash
-kubectl apply -f ./argocd
+kubectl apply -k ./deployments/applications/base
 ```
 
 ## Log into the ArgoCD server
@@ -58,4 +58,4 @@ Get the secret that stores the password and decode it with the bellow command.
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 --decode
 ```
 
-FzdVbth1sQDEWBfW
+cvkFeSVlaXSepxhy

@@ -9,4 +9,4 @@ namePrefix: production-
 nameSuffix: -v1
 
 commonLabels:
-  name: app-one
+  name: p-app-one

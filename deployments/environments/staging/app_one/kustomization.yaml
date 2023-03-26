@@ -9,4 +9,4 @@ namePrefix: staging-
 nameSuffix: -v1
 
 commonLabels:
-  name: app-one
+  name: s-app-one
