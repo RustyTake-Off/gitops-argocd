@@ -1,19 +1,12 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: staging-app-one
-  namespace: staging-app-one
-  labels:
-    app: staging-app-one
+  name: app-one
+  namespace: app-one
 spec:
   replicas: 1
-  selector:
-    matchLabels:
-      app: staging-app-one
   template:
-    metadata:
-      labels:
-        app: staging-app-one
     spec:
       containers:
         - name: hello-kubernetes
