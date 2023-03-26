@@ -4,3 +4,9 @@ kind: Kustomization
 
 resources:
   - namespace.yaml
+
+namePrefix: staging-
+nameSuffix: -v1
+
+commonLabels:
+  name: s-app-one
