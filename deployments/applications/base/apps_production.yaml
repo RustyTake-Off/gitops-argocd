@@ -43,7 +43,7 @@ spec:
   project: gitops-argocd
   source:
     repoURL: https://github.com/RustyTake-Off/gitops-argocd.git
-    targetRevision: HEAD
+    targetRevision: main
     path: deployments/environments/production/app_two
   destination:
     server: https://kubernetes.default.svc
