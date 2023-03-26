@@ -2,10 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-two
+  name: app-one
+  namespace: app-one
+  labels:
+    name: app-one
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      name: app-one
   template:
+    metadata:
+      labels:
+        name: app-one
     spec:
       containers:
         - name: hello-kubernetes
@@ -34,7 +43,7 @@ spec:
             - name: PORT
               value: "8080"
             - name: MESSAGE
-              value: "Hello"
+              value: "Hello app-one"
             - name: KUBERNETES_NAMESPACE
               valueFrom:
                 fieldRef:
