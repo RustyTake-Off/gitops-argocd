@@ -5,8 +5,10 @@ kind: Kustomization
 resources:
   - ./base
 
+namespace: app-two
+
 namePrefix: staging-
 nameSuffix: -v1
 
 commonLabels:
-  name: s-app-two
+  name: app-two
