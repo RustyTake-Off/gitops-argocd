@@ -1,5 +1,0 @@
-resources:
-  - ../base
-
-patches:
-  - replicas.yaml
