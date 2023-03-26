@@ -57,5 +57,3 @@ Get the secret that stores the password and decode it with the bellow command.
 ```bash
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 --decode
 ```
-
-cvkFeSVlaXSepxhy

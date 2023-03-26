@@ -34,9 +34,7 @@ spec:
             - name: PORT
               value: "8080"
             - name: MESSAGE
-              valueFrom:
-                fieldRef:
-                  fieldPath: metadata.labels.name
+              value: "Hello"
             - name: KUBERNETES_NAMESPACE
               valueFrom:
                 fieldRef:
@@ -49,7 +47,3 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: spec.nodeName
-            - name: CONTAINER_IMAGE
-              valueFrom:
-                fieldRef:
-                  fieldPath: spec.template.spec.containers[0].image
