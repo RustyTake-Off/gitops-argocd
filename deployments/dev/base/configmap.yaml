@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: webapp-2-cm
-data:
-  TITLE_webapp_2: "Welcome to AKS from webapp-2"

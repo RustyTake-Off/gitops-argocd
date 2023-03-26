@@ -1,0 +1,27 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: gitops-argocd
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    name: gitops-argocd
+spec:
+  description: "Project for gitops-argocd - https://github.com/RustyTake-Off/gitops-argocd."
+
+  sourceRepos:
+    - "*"
+
+  destinations:
+    - server: https://kubernetes.default.svc
+      namespace: "*"
+
+  clusterResourceWhitelist:
+    - group: "*"
+      kind: "*"
+
+  namespaceResourceWhitelist:
+    - group: "*"
+      kind: "*"

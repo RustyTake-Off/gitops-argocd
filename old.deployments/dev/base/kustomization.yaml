@@ -7,6 +7,5 @@ namePrefix: prod-
 nameSuffix: -v1
 
 resources:
-  - configmap.yaml
   - deployment.yaml
   - service.yaml
